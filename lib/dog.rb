@@ -71,6 +71,7 @@ class Dog
       WHERE NAME = ?
       SQL
     result = DB[:conn].execute(sql, name)[0]
+    binding.pry
     Dog.new_from_database(result)
 
   end
